@@ -4,7 +4,7 @@ from pandas import pandas as pd
 data_frame = pd.read_csv('edades-30Alumnos2.csv')
 
 # Función de análisis matemático
-def analisis_matematico(data_frame):
+def analisis_estadistico(data_frame):
     
     # Verifica si las columnas necesarias existen en el data_frame
     required_columns = ["fi"]
@@ -35,4 +35,4 @@ def analisis_matematico(data_frame):
     data_frame.to_clipboard()
 
 # Llamada a la función
-analisis_matematico(data_frame)
+analisis_estadistico(data_frame)
