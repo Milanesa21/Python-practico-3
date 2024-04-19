@@ -3,11 +3,13 @@ import pandas as pd
 # Carga de datos
 data =  [19, 29, 19, 22, 23, 19, 30, 19, 19, 19, 20, 20, 20, 18, 22, 19, 34, 34, 21, 21, 22, 28, 29, 19, 20, 19, 25, 28, 21, 22]
 
-# Crea un DataFrame a partir de la lista de datos
-data_frame = pd.DataFrame(data, columns=['Edad'])
+
 
 # Función de análisis matemático
-def analisis_estadistico(data_frame):
+def analisis_estadistico(data):
+    
+    # Crea un DataFrame a partir de la lista de datos
+    data_frame = pd.DataFrame(data, columns=['Edad'])
     # Verifica si el DataFrame está vacío
     if data_frame.empty:
         print("No se encontraron edades para realizar el análisis.")
@@ -39,6 +41,5 @@ def analisis_estadistico(data_frame):
         calculations_df.to_clipboard()
     else:
         print("No se encontraron edades para realizar el análisis.")
-
 # Llamada a la función
-analisis_estadistico(data_frame)
+analisis_estadistico(data)
