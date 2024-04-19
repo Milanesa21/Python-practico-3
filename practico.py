@@ -28,7 +28,7 @@ def analisis_estadistico(data_frame):
         })
         
         # Realiza los cálculos si 'fi' no contiene valores nulos
-        if calculations_df['Edad'].isna().any():
+        if calculations_df['Edad'].isnull.any() or not calculations_df['Edad'].dtype == int:
             print("La lista 'Edad' no puede contener valores nulos.")
             return
         
