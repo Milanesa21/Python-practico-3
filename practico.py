@@ -8,8 +8,19 @@ data =  [19, 29, 19, 22, 23, 19, 30, 19, 19, 19, 20, 20, 20, 18, 22, 19, 34, 34,
 # Función de análisis matemático
 def analisis_estadistico(data):
     
+    #verifica si es una lista
+    if not isinstance(data, list):
+        print("Los datos deben ser una lista")
+        return None 
+    
+    #Verifica que los datos sean numericos
+    if not all(isinstance(x, (int, float)) for x in data):
+        print("Los datos deben ser numéricos")
+        return None
+    
     # Crea un DataFrame a partir de la lista de datos
     data_frame = pd.DataFrame(data, columns=['Edad'])
+    
     # Verifica si el DataFrame está vacío
     if data_frame.empty:
         print("No se encontraron edades para realizar el análisis.")
